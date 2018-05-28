@@ -16,16 +16,16 @@ import { Component } from '@angular/core';
       <button (click)="handleClick(mobile.value)">Get Value</button>
       <label>{{ mobileNumber }}</label>
     </div>
+    <passenger-dashboard></passenger-dashboard>
   `
 })
-
 export class AppComponent {
   title: string;
   name: string = 'Dinesh';
   mobileNumber: string;
 
   constructor() {
-    this.title = 'Learning Angular!';
+    this.title = 'Welcome to Angular!';
   }
 
   handleChange(value: string) {
