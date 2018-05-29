@@ -1,4 +1,4 @@
-import { Component, Input, EventEmitter, Output } from "@angular/core";
+import { Component, Input, EventEmitter, Output, OnChanges } from "@angular/core";
 import { Passenger } from "../../models/Passenger.interface";
 
 @Component({
@@ -18,7 +18,7 @@ import { Passenger } from "../../models/Passenger.interface";
     </div>
   `
 })
-export class PassengerDetailComponent{
+export class PassengerDetailComponent implements OnChanges {
   @Input()
   detail: Passenger;
 
@@ -30,6 +30,12 @@ export class PassengerDetailComponent{
 
   isEditMode: boolean = false;
 
+  ngOnChanges(changes){
+    if(changes.detail){
+      this.detail = Object.assign({}, changes.detail.currentValue);
+    }
+  }
+
   onNameChange(value: string): void{
     this.detail.name = value;
   }
@@ -37,7 +43,7 @@ export class PassengerDetailComponent{
   toggleEdit(){
     if (this.isEditMode)
       this.edit.emit(this.detail);
-      
+
     this.isEditMode = !this.isEditMode;
   }
 
