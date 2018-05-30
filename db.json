@@ -1,1 +1,19 @@
-{}
+{
+  "passengers": [{
+    "id": 1,
+    "name": "Anand",
+    "checkedIn": true
+  }, {
+    "id": 2,
+    "name": "Ananya",
+    "checkedIn": false
+  }, {
+    "id": 3,
+    "name": "Aakash",
+    "checkedIn": true
+  }, {
+    "id": 4,
+    "name": "Abhi",
+    "checkedIn": false
+  }]
+}
