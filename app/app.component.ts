@@ -5,35 +5,17 @@ import { Component } from '@angular/core';
   styleUrls: ['app.component.scss'],
   template: `
     <div class="app">
-      {{title}}
-      <div>
-        <input id="firstname" [ngModel]="name" (ngModelChange)="handleChange($event)"/>
-        <input id="lastname" [(ngModel)]="name"/>
-      </div>
+      <h2>{{title}}</h2>
     </div>
-    <div>
-      <input #mobile>
-      <button (click)="handleClick(mobile.value)">Get Value</button>
-      <label>{{ mobileNumber }}</label>
-    </div>
+
     <passenger-dashboard></passenger-dashboard>
+    <passenger-viewer></passenger-viewer>
   `
 })
 export class AppComponent {
   title: string;
-  name: string = 'Dinesh';
-  mobileNumber: string;
 
   constructor() {
     this.title = 'Welcome to Angular!';
-  }
-
-  handleChange(value: string) {
-    this.name = value;
-  }
-
-  handleClick(value:  string) {
-    console.log(value);
-    this.mobileNumber = value;
   }
 }

@@ -1,19 +1,37 @@
 {
-  "passengers": [{
-    "id": 1,
-    "name": "Anand",
-    "checkedIn": true
-  }, {
-    "id": 2,
-    "name": "Ananya",
-    "checkedIn": false
-  }, {
-    "id": 3,
-    "name": "Aakash",
-    "checkedIn": true
-  }, {
-    "id": 4,
-    "name": "Abhi",
-    "checkedIn": false
-  }]
+  "passengers": [
+    {
+      "id": 1,
+      "name": "Anand",
+      "checkedIn": true,
+      "checkedInDate": 1490742000000,
+      "baggage": "none"
+    },
+    {
+      "id": 2,
+      "name": "Ananya",
+      "checkedIn": false,
+      "baggage": ""
+    },
+    {
+      "id": 3,
+      "name": "Aakash",
+      "checkedIn": true,
+      "checkedInDate": 1488412800000,
+      "baggage": "hand-only"
+    },
+    {
+      "name": "Sannihith",
+      "id": 4,
+      "checkedIn": true,
+      "baggage": "hand-only",
+      "checkedInDate": 1527784455388
+    },
+    {
+      "id": 5,
+      "name": "Anirudh",
+      "checkedIn": false,
+      "baggage": ""
+    }
+  ]
 }
