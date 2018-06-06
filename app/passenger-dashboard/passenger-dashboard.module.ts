@@ -24,7 +24,8 @@ const routes: Routes = [
       { path: ':id', component: PassengerViewerComponent}
     ]
   }
-]
+];
+
 @NgModule({
   declarations: [
     PassengerDashboardComponent,

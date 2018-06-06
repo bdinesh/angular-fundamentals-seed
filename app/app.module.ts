@@ -6,13 +6,16 @@ import {FormsModule} from "@angular/forms";
 import { RouterModule, Routes } from "@angular/router";
 
 import { PassengerDashboardModule } from "./passenger-dashboard/passenger-dashboard.module";
+import { AuthFormModule} from "./auth-form/auth-form.module";
 
 import { HomeComponent } from "./home.component";
 import {AppComponent} from './app.component';
 import { NotFoundComponent } from './not-found.component';
+import {AuthContainerComponent} from "./auth-form/containers/auth-container.component";
 
 const routes: Routes = [
   {path: '', component: HomeComponent, pathMatch: 'full'},
+  {path: 'auth', component: AuthContainerComponent},
   { path: '**', component: NotFoundComponent}
 ];
 
@@ -23,7 +26,8 @@ const routes: Routes = [
     CommonModule,
     FormsModule,
     RouterModule.forRoot(routes),
-    PassengerDashboardModule
+    PassengerDashboardModule,
+    AuthFormModule
   ],
   bootstrap: [
     AppComponent

@@ -17,13 +17,12 @@ import { Component } from '@angular/core';
   `
 })
 export class AppComponent {
-  title: string;
   navItems = [
+    {link: '/auth', name: 'Auth', exact: false},
     {link: '/', name:'Home', exact: true},
     {link: '/passengers', name:'Passengers', exact: false},
     {link: '/oops', name:'404', exact: false}
-  ]
-  constructor() {
-    this.title = 'Welcome to Angular!';
-  }
+  ];
+
+  constructor() {}
 }
